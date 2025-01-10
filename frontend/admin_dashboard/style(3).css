@@ -1,0 +1,79 @@
+/* Basic layout adjustments */
+body {
+  background-color: #f7f7f7;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Navbar style */
+.navbar {
+  background-color: #17a2b8;
+  color: white;
+}
+.navbar-title {
+  font-size: 1.5rem;
+  margin: 0;
+  color: white;
+}
+
+/* Main container adjustments */
+.container {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex-grow: 1; /* Ensure the content takes up available space */
+}
+
+/* Dropdown and button container */
+.dropdown-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Dropdown style */
+#myDropdown {
+  width: 200px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Input style */
+input[type="text"] {
+  width: 150px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Button style with !important to override Bootstrap styles */
+.btn-sm {
+  max-width: 150px;
+  padding: 10px 20px;
+  background-color: #007bff !important; /* Custom blue button color with !important */
+  color: white !important;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  text-align: center;
+}
+
+.btn-sm:hover {
+  background-color: #0056b3 !important; /* Darker blue for hover effect with !important */
+}
+
+/* Footer style */
+footer {
+  background-color: #17a2b8;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  margin-top: auto; /* Pushes the footer to the bottom */
+}
