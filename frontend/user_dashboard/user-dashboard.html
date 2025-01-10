@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <link href="styles(2).css" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <h1 class="navbar-title">Task Manager</h1>
+      <div class="search-container">
+        <input type="text" id="search-task" class="form-control" placeholder="Search tasks...">
+        <button class="search-btn">🔍</button> <!-- Search icon inside button -->
+      </div>
+    </div>
+  </nav>
+
+  <div class="main-content">
+    <h2 class="centered-title">Manage Your Tasks</h2>
+
+    <!-- Task Dropdown Menu -->
+    <div class="centered-container">
+      <h3>Task Actions</h3>
+      <select id="task-action" class="form-control">
+        <option value="" selected disabled>Select Action</option>
+        <option value="Create">Create Task</option>
+        <option value="update">Update Task Status</option>
+        <option value="delete">Delete Task</option>
+        <option value="filter">Filter by Status</option>
+      </select>
+    </div>
+
+    <!-- Create Task -->
+    <div class="centered-container" id="create-task-container">
+      <h3>Create Task</h3>
+      <form id="task-form">
+        <div class="form-group">
+          <label for="task-name">Task Name</label>
+          <input type="text" id="task-name" class="form-control" placeholder="Enter task name" required>
+        </div>
+        <div class="form-group">
+          <label for="task-description">Task Description</label>
+          <textarea id="task-description" class="form-control" placeholder="Enter task description" required></textarea>
+        </div>
+        <button type="submit" class="button button-create">Create Task</button>
+      </form>
+    </div>
+
+    <!-- Update Task Form -->
+    <div id="update-task-container" style="display: none;">
+      <h3>Update Task</h3>
+      <form id="update-task-form">
+        <label for="update-task-id">Task ID:</label>
+        <input type="text" id="update-task-id" placeholder="Enter Task ID" required />
+        <label for="update-task-status">Status:</label>
+        <select id="update-task-status" required>
+          <option value="">Select Status</option>
+          <option value="Pending">Pending</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Completed">Completed</option>
+          <option value="Canceled">Canceled</option>
+        </select>
+        <button type="submit">Update Task</button>
+      </form>
+    </div>
+
+    <!-- Filter by status -->
+    <div class="centered-container" id="filter-by-status" style="display: none;">
+      <h3>Filter by Status</h3>
+      <form id="filter-form">
+        <div class="form-group">
+          <label for="filter-status">Task Status</label>
+          <select id="filter-status" class="form-control">
+            <option value="">Select Status</option>
+            <option value="Pending">Pending</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Completed">Completed</option>
+            <option value="Canceled">Canceled</option>
+          </select>
+        </div>
+        <button type="submit" class="button button-save">Filter by Status</button>
+      </form>
+    </div>
+
+    <!-- Delete Task -->
+    <div class="centered-container" id="delete-task-container" style="display: none;">
+      <h3>Delete Task</h3>
+      <form id="delete-task-form">
+        <div class="form-group">
+          <label for="delete-task-id">Task ID</label>
+          <input type="number" id="delete-task-id" class="form-control" placeholder="Enter task ID to delete" required>
+        </div>
+        <button type="submit" class="button button-delete">Delete Task</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Table to display tasks -->
+  <div class="centered-container">
+    <h3>Task List</h3>
+    <table id="tasks-table" class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="tasks-table-body">
+        <!-- Task rows will be populated here dynamically -->
+      </tbody>
+    </table>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2025 Task Manager. All rights reserved.</p>
+  </footer>
+
+  <script src="user-dashboard.js"></script>
+</body>
+</html>

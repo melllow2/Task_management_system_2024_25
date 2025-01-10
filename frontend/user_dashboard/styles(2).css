@@ -1,0 +1,268 @@
+/* Reset some basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: #383838;
+  background-color: #f8f9fa; /* Bootstrap light gray */
+  padding-bottom: 60px; /* Avoid overlapping with footer */
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #33cccc;
+  z-index: 1000;
+}
+
+.navbar-container {
+  text-align: center;
+  color: #fff;
+  line-height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.navbar-title {
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+
+/* Main Content */
+.main-content {
+  margin-top: 100px; /* Leave space for the navbar */
+  padding: 20px;
+}
+
+.centered-title {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: bold;
+  color: #33cccc;
+  margin-bottom: 30px;
+}
+.centered-container {
+  width: 70%; /* Wider box */
+  max-width: 800px; /* Limit max width */
+  margin: 20px auto; /* Space between boxes */
+  padding: 30px;
+  
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: none;
+  height: 100px; 
+}
+
+button {
+  display: inline-block;
+  width: 100%; 
+  font-size: 16px;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  
+}
+
+
+.task {
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.task:hover {
+  transform: scale(1.02);
+}
+
+.no-task-message {
+  text-align: center;
+  font-size: 18px;
+  color: #888;
+  margin-top: 20px;
+}
+
+.button {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.button-create {
+  background-color: #28a745; 
+}
+
+.button-create:hover {
+  background-color: #218838;
+}
+
+.button-save {
+  background-color: #007bff; 
+}
+
+.button-save:hover {
+  background-color: #0056b3;
+}
+
+.button-delete {
+  background-color: #dc3545;
+}
+
+.button-delete:hover {
+  background-color: #c82333;
+}
+
+/* Footer Styles */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #33cccc;
+  text-align: center;
+  
+}
+.footer p{
+  gap: 10px;
+}
+ 
+/* Search Container */
+.search-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Style for the input box */
+.search-container input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff; /* Background color of the input */
+}
+
+/* Style for the search button (icon) next to the input */
+.search-btn {
+  padding: 5px; /* Reduced padding for a smaller button */
+  background-color: #33cccc; /* Same color as your navbar */
+  border: none;
+  cursor: pointer;
+  font-size: 18px; /* Adjust size of the icon */
+  color: white;
+  border-radius: 5px; /* Make the button rounded */
+  margin-left: 10px; /* Space between the input and the button */
+  width: auto; /* Let the width adjust to fit the icon */
+  height: auto; /* Let the height adjust to fit the icon */
+  line-height: 18px; /* Set line-height to match the icon size */
+}
+
+.search-btn:hover {
+  background-color: #28a745; /* Hover effect for the button */
+}
+
+/* Optional: Adjust margin or positioning of the search container */
+.search-container {
+  margin-left: 700px;
+  max-width: 400px; /* Optional: Restrict the width of the search box */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+#update-task-container {
+  width: 65%; /* Or you can set a max-width if you prefer */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#update-task-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#update-task-form label {
+  margin: 10px 0 5px;
+}
+
+#update-task-form input,
+#update-task-form select {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#update-task-form button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#update-task-form button:hover {
+  background-color: #0056b3;
+}
+
