@@ -1,0 +1,250 @@
+/* Reset some basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: #383838;
+  background-color: #f8f9fa; /* Bootstrap light gray */
+  padding-bottom: 60px; /* Avoid overlapping with footer */
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #33cccc;
+  z-index: 1000;
+}
+
+.navbar-container {
+  text-align: center;
+  color: #fff;
+  line-height: 60px;
+}
+
+.navbar-title {
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Main Content */
+.main-content {
+  margin-top: 100px; /* Leave space for the navbar */
+  padding: 20px;
+}
+
+.centered-title {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: bold;
+  color: #33cccc;
+  margin-bottom: 30px;
+}
+
+/* Bootstrap-inspired card container */
+.centered-container {
+  width: 70%; /* Wider box */
+  max-width: 800px; /* Limit max width */
+  margin: 20px auto; /* Space between boxes */
+  padding: 30px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form group spacing */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: none;
+  height: 100px; /* Default height for textareas */
+}
+
+button {
+  display: inline-block;
+  width: 100%; /* Full-width buttons for uniformity */
+  font-size: 16px;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+/* Task Styling */
+.task {
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.task:hover {
+  transform: scale(1.02);
+}
+
+.no-task-message {
+  text-align: center;
+  font-size: 18px;
+  color: #888;
+  margin-top: 20px;
+}
+
+/* Buttons */
+.button {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.button-create {
+  background-color: #28a745; /* Bootstrap green */
+}
+
+.button-create:hover {
+  background-color: #218838;
+}
+
+.button-save {
+  background-color: #007bff; /* Bootstrap blue */
+}
+
+.button-save:hover {
+  background-color: #0056b3;
+}
+
+.button-delete {
+  background-color: #dc3545; /* Bootstrap red */
+}
+
+.button-delete:hover {
+  background-color: #c82333;
+}
+
+/* Footer Styles */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #33cccc;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+/* Error Message Styling */
+.alert-danger {
+  background-color: #f9606f; /* Red background for error messages */
+  color: white; /* White text color */
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+/* Success Message Styling */
+.alert-success {
+  background-color: #28a745; /* Green background for success messages */
+  color: white;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+/* Error Message Color */
+.alert-danger {
+  background-color: #e06874 !important; /* Red background for error messages */
+  color: white !important; /* White text color for error messages */
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+/* Success Message Color */
+.alert-success {
+  background-color: #52cb6e !important; /* Green background for success messages */
+  color: white !important; /* White text color for success messages */
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+/* Link Styles */
+a {
+  text-decoration: none;
+  color: #007bff;  /* Bootstrap primary color */
+  font-weight: bold;
+  font-size: 16px;  /* Ensure consistent font size */
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a:hover {
+  color: #0056b3;  /* Darker shade of blue */
+  text-decoration: underline;
+}
+
+/* Optional: Additional styling for specific links */
+a:focus, a:active {
+  outline: none;
+  text-decoration: underline;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .centered-container {
+    width: 90%;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
+  
+  
+}
